@@ -859,7 +859,8 @@ class IntelPackage(PackageBase):
         # and friends are set to point to the Intel compilers, but in
         # practice, mpicc fails to compile some applications while
         # mpiicc works.
-        bindir = self.component_bin_dir('mpi')
+        #bindir = self.component_bin_dir('mpi')
+        bindir = self.component_bin_dir('mpi_2019/intel64')
         if self.compiler.name == 'intel':
             wrapper_vars = {
                 # eschew Prefix objects -- emphasize the command strings.
